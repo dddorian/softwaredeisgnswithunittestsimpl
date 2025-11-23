@@ -1,0 +1,17 @@
+Maintain this on a piece of paper or even a napkin (I write this here only so you can easily see it remotely).
+
+Tests:
+✓ canary test
+x a player should not take two turns in a row - our design does not allow this
+✓ a player can't place peg at an occupied position 
+✓ player plays their turn to place a peg
+- can't place peg outside of the boundary
+- game ends when there are no open cells
+- no more mores after game is over
+- game may have a win or a draw
+✓ player places their first peg
+✓ second player places their first peg
+✓ first player places their second peg
+- check for row match win
+- check of column match win
+- check for diagonal match win
