@@ -1,4 +1,4 @@
-package org.example.game;
+package org.example.tictactoe;
 
 public class TicTacToeGame {
     private final int SIZE;
