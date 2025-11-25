@@ -22,5 +22,17 @@ class GameOfLifeTest {
         assertEquals(LIVE, gameOfLife.getCellAt(1,0).getCellState());
     }
 
-
+    @Test
+    void gameCanGetLiveNeighboursForCell(){
+        gameOfLife = new GameOfLife(List.of(new Cell(1,0), new Cell(0,0), new Cell(0,1),
+                new Cell(1,1)), 3);
+        assertEquals(List.of(gameOfLife.getCellAt(0,1), gameOfLife.getCellAt(1,0),
+                gameOfLife.getCellAt(1,1)), gameOfLife.getLiveNeighbours(0,0));
+        assertEquals(List.of(gameOfLife.getCellAt(0,0), gameOfLife.getCellAt(0,1),
+                gameOfLife.getCellAt(1,1)), gameOfLife.getLiveNeighbours(1,0));
+        assertEquals(List.of(gameOfLife.getCellAt(0,0), gameOfLife.getCellAt(1,0),
+                gameOfLife.getCellAt(1,1)), gameOfLife.getLiveNeighbours(0,1));
+        assertEquals(List.of(gameOfLife.getCellAt(0,0), gameOfLife.getCellAt(0,1),
+                gameOfLife.getCellAt(1,0)), gameOfLife.getLiveNeighbours(1,1));
+    }
 }

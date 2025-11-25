@@ -11,6 +11,14 @@ public class Cell {
         this.cellState = State.DEAD;
     }
 
+    public int getRow() {
+        return row;
+    }
+
+    public int getColumn() {
+        return column;
+    }
+
     public void setCellState(State cellState) {
         this.cellState = cellState;
     }
